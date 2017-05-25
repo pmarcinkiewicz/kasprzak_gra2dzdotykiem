@@ -17,6 +17,6 @@ public class GlownaActivity extends Activity {
 
         // Wyłącz pasek tytułowy
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_glowna);
+        setContentView(new GameSurface(this));
     }
 }
