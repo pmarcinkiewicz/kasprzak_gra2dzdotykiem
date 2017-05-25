@@ -76,7 +76,7 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
         if(motionEvent.getAction() == motionEvent.ACTION_DOWN) {
             int x = (int) motionEvent.getX();
             int y = (int) motionEvent.getY();
-
+            chibi1.setmPoruszajacyWektor(x,y);
             System.out.println("x: "+x+", y: "+y);
             return true;
 
