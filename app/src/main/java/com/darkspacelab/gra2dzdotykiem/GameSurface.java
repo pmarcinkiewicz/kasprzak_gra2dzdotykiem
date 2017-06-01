@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -69,6 +70,20 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
             }
             retry= true;
         }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        //if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            int x=  (int)event.getX();
+            int y = (int)event.getY();
+            int movingVectorX =x-  chibi1.getX() ;
+            int movingVectorY =y-  chibi1.getY() ;
+            chibi1.setmPoruszajacyWektor(movingVectorX, movingVectorY);
+
+            return true;
+        //}
+        //return false;
     }
 
 }
